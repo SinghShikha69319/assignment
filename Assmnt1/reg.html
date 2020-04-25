@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .uper_bg {
+            width: 100%;
+            height: 100px;
+            background: black;
+        }
+        
+        .txt_styling {
+            padding: 20px 0px 0px 20px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="uper_bg ">
+        <h1 class="text-white txt_styling font-weight-normal ">This is Registration Page</h1>
+    </div>
+    <div class=" jumbotron ">
+        <div class="container">
+            <div class="card">
+                <div class="card-header ">
+                    Create an account
+                </div>
+                <div class="card-body">
+                    <form onsubmit="return reg_validtn()">
+                        <div class="form-group ">
+                            <label for="fName">First Name:</label>
+                            <input type="fName" id="fName" placeholder="Enter Your First Name" class="form-control" value="">
+                            <span id="fNameVal"></span>
+                        </div>
+                        <!--End of fname-->
+                        <div class="form-group">
+                            <label for="lName">Last Name:</label>
+                            <input type="lName" id="lName" placeholder="Enter Your LastName" class="form-control">
+                        </div>
+                        <!--End of lname-->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Enter Your Email Id" class="form-control" autocomplete="off">
+                        </div>
+                        <!--End of Email-->
+                        <div class="form-group">
+                            <label for="phone">Phone No:</label>
+                            <input type="number" id="phone" placeholder="Enter Your Mobile No" class="form-control" autocomplete="off">
+                        </div>
+                        <!--End of Phone-->
+                        <label>Select Photo :</label>
+                        <div class="custom-file custom-control-inline">
+                            <label class="custom-file-label " for="photo">Upload Photo:</label>
+                            <input class="custom-file-input" type="file" id="photo">
+                        </div>
+                        <!--End of Photo-->
+                        <div class="mt-3">
+                            <label>Select Gender :</label>
+                            <label class="radio-inline ml-2">
+                            <input type="radio" name="optradio" checked>Felmale
+                          </label>
+                            <label class="radio-inline ml-2 mr-5">
+                            <input type="radio" name="optradio" >Male
+                          </label>
+                        </div>
+                        <!--End of gender-->
+                        <!--Start of Dob-->
+                        <label class="mr-3">Select D.O.B :</label>
+                        <div class="dropdown d-inline-block mr-3">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                              Select Day
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-down">
+                                <li class="dropdown-item">Janurary</li>
+                                <li class="dropdown-item">feburary</li>
+                                <li class="dropdown-item">March</li>
+                                <li class="dropdown-item">April</li>
+                                <li class="dropdown-item">May</li>
+                                <li class="dropdown-item">June</li>
+                                <li class="dropdown-item">July</li>
+                                <li class="dropdown-item">August</li>
+                                <li class="dropdown-item">September</li>
+                                <li class="dropdown-item">Octbet</li>
+                                <li class="dropdown-item">November</li>
+                                <li class="dropdown-item">December</li>
+                            </ul>
+                        </div>
+                        <!--End of day-->
+                        <div class="dropdown d-inline-block mr-3">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Select Date
+                                  </button>
+                            <ul class="dropdown-menu dropdown-menu-down">
+                                <li class="dropdown-item">1</li>
+                                <li class="dropdown-item">2</li>
+                                <li class="dropdown-item">3</li>
+                                <li class="dropdown-item">4</li>
+                                <li class="dropdown-item">5</li>
+                                <li class="dropdown-item">6</li>
+                                <li class="dropdown-item">7</li>
+                                <li class="dropdown-item">8</li>
+                                <li class="dropdown-item">9</li>
+                                <li class="dropdown-item">10</li>
+                                <li class="dropdown-item">11</li>
+                                <li class="dropdown-item">12</li>
+                                <li class="dropdown-item">13</li>
+                                <li class="dropdown-item">14</li>
+                                <li class="dropdown-item">15</li>
+                                <li class="dropdown-item">16</li>
+                                <li class="dropdown-item">17</li>
+                                <li class="dropdown-item">18</li>
+                                <li class="dropdown-item">19</li>
+                                <li class="dropdown-item">20</li>
+                                <li class="dropdown-item">21</li>
+                                <li class="dropdown-item">22</li>
+                                <li class="dropdown-item">23</li>
+                                <li class="dropdown-item">24</li>
+                                <li class="dropdown-item">25</li>
+                                <li class="dropdown-item">26</li>
+                                <li class="dropdown-item">27</li>
+                                <li class="dropdown-item">28</li>
+                                <li class="dropdown-item">29</li>
+                                <li class="dropdown-item">30</li>
+                                <li class="dropdown-item">31</li>
+                            </ul>
+                        </div>
+                        <!--End of date-->
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                              Select Year
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-down">
+                                <li class="dropdown-item">1990</li>
+                                <li class="dropdown-item">1991</li>
+                                <li class="dropdown-item">1992</li>
+                                <li class="dropdown-item">1993</li>
+                                <li class="dropdown-item">1994</li>
+                                <li class="dropdown-item">1995</li>
+                                <li class="dropdown-item">1996</li>
+                            </ul>
+                        </div>
+                    </form>
+                    <!--End of form-->
+                </div>
+                <!--End of card body-->
+                <div class="card-footer">
+                    <button class="btn btn-dark btn-lg" style="margin-left: 850px;">Register</button>
+                </div>
+            </div>
+            <!--End of card-->
+        </div>
+        <!--End of container-->
+    </div>
+    <!--End of jumbotron-->
+
+    <!--CDN-->
+    <script>
+        function reg_validtn() {
+            var fname = document.getElementById("fName");
+        }
+    </script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js "></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
